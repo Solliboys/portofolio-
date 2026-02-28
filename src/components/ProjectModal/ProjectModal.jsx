@@ -30,7 +30,7 @@ const CarouselImages = ({ images, title }) => {
       <img
         src={images[currentIndex]}
         alt={`${title} - image ${currentIndex + 1}`}
-        className="w-full h-auto max-h-[60vh] object-contain transition-all duration-500 bg-zinc-800"
+        className="w-full h-auto max-h-[40vh] sm:max-h-[60vh] object-contain transition-all duration-500 bg-zinc-800"
       />
 
       {images.length > 1 && (
@@ -101,7 +101,7 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
       {/* Modal Content */}
       <div
         onClick={(e) => e.stopPropagation()} // Mencegah modal tertutup saat diklik di dalam
-        className={`bg-zinc-900 border border-violet-500/50 rounded-2xl shadow-2xl shadow-violet-500/20 w-full max-w-lg transform transition-transform duration-300 ${isClosing ? 'animate-out' : 'animate-in'}`}
+        className={`bg-zinc-900 border border-violet-500/50 rounded-2xl shadow-2xl shadow-violet-500/20 w-full max-w-lg max-h-[90vh] overflow-y-auto transform transition-transform duration-300 scrollbar-hide ${isClosing ? 'animate-out' : 'animate-in'}`}
       >
         {/* --- GAMBAR PROYEK / SERTIFIKAT / ORGANISASI --- */}
         <div className="relative group/img bg-zinc-800 rounded-t-2xl overflow-hidden min-h-[200px] flex items-center justify-center">
@@ -175,6 +175,14 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
         }
         .animate-out {
           animation: scaleOut 0.3s ease-in forwards;
+        }
+
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
         }
       `}</style>
     </div>
