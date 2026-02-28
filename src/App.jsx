@@ -196,15 +196,15 @@ function App() {
             {listTools.map((tool) => (
               <div
                 key={tool.id} data-aos="fade-up" data-aos-duration="600" data-aos-delay={tool.dad} data-aos-once="true"
-                className="flex items-center gap-4 p-4 border border-zinc-700 rounded-xl bg-zinc-900/60 backdrop-blur-md hover:bg-zinc-800/80 transition-all duration-300 group shadow-lg"
+                className="flex flex-col items-center text-center gap-3 p-4 border border-zinc-700 rounded-xl bg-zinc-900/60 backdrop-blur-md hover:bg-zinc-800/80 transition-all duration-300 group shadow-lg"
               >
                 <img
                   src={tool.gambar}
                   alt="Tools Image"
-                  className="w-16 h-16 object-contain bg-zinc-800 p-2 rounded-lg group-hover:bg-zinc-900 transition-all duration-300"
+                  className="w-12 h-12 md:w-16 md:h-16 object-contain bg-zinc-800 p-2 rounded-lg group-hover:bg-zinc-900 transition-all duration-300"
                 />
-                <div className="flex flex-col overflow-hidden">
-                  <div className="truncate">
+                <div className="flex flex-col w-full">
+                  <div className="mb-1">
                     <ShinyText
                       text={tool.nama}
                       disabled={false}
@@ -212,7 +212,7 @@ function App() {
                       className="text-lg font-semibold block"
                     />
                   </div>
-                  <p className="text-sm text-zinc-400 truncate">{tool.ket}</p>
+                  <p className="text-xs text-zinc-400 line-clamp-1">{tool.ket}</p>
                 </div>
               </div>
             ))}
@@ -271,12 +271,12 @@ function App() {
                 data-aos-delay={prestasi.delay}
                 data-aos-once="true"
               >
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-zinc-900 rounded-xl group-hover:scale-110 transition-transform duration-300">
+                <div className="flex flex-col items-center text-center gap-4">
+                  <div className="p-3 bg-zinc-900 rounded-xl group-hover:scale-110 transition-transform duration-300 w-fit">
                     <i className={`${prestasi.icon} ri-2x text-violet-500`}></i>
                   </div>
                   <div>
-                    <span className="text-violet-500 font-semibold text-sm">{prestasi.year}</span>
+                    <span className="text-violet-500 font-semibold text-sm block mb-1">{prestasi.year}</span>
                     <h3 className="text-xl font-bold text-white mb-2">{prestasi.title}</h3>
                     <p className="text-zinc-400 text-sm leading-relaxed">{prestasi.description}</p>
                   </div>
@@ -318,12 +318,12 @@ function App() {
                 data-aos-delay={org.delay}
                 data-aos-once="true"
               >
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col items-center text-center gap-4">
                   <div className="w-12 h-12 flex items-center justify-center bg-zinc-900 rounded-xl group-hover:scale-110 transition-transform duration-300 border border-zinc-700 group-hover:border-cyan-500/50">
                     <i className={`${org.icon} ri-xl text-cyan-500`}></i>
                   </div>
-                  <div>
-                    <div className="flex justify-between items-start mb-2">
+                  <div className="w-full">
+                    <div className="flex justify-center items-start mb-2">
                       <span className="text-cyan-500 font-semibold text-xs tracking-wider uppercase">{org.year}</span>
                     </div>
                     <h3 className="text-lg font-bold text-white mb-1 group-hover:text-cyan-400 transition-colors uppercase tracking-tight">{org.title}</h3>
