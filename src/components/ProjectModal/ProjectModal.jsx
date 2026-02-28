@@ -1,5 +1,66 @@
 import React, { useState, useEffect } from 'react';
-import { FiX, FiGithub } from 'react-icons/fi'; // Install react-icons jika belum: npm install react-icons
+import { FiX, FiGithub, FiChevronLeft, FiChevronRight } from 'react-icons/fi'; // Install react-icons jika belum: npm install react-icons
+
+const CarouselImages = ({ images, title }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const prev = (e) => {
+    if (e) e.stopPropagation();
+    setCurrentIndex(currentIndex === 0 ? images.length - 1 : currentIndex - 1);
+  };
+
+  const next = (e) => {
+    if (e) e.stopPropagation();
+    setCurrentIndex(currentIndex === images.length - 1 ? 0 : currentIndex + 1);
+  };
+
+  // Auto-play effect
+  useEffect(() => {
+    if (images.length <= 1) return;
+
+    const interval = setInterval(() => {
+      next();
+    }, 3000); // Ganti gambar setiap 3 detik
+
+    return () => clearInterval(interval);
+  }, [currentIndex, images.length]);
+
+  return (
+    <div className="relative w-full h-full group">
+      <img
+        src={images[currentIndex]}
+        alt={`${title} - image ${currentIndex + 1}`}
+        className="w-full h-auto max-h-[60vh] object-contain transition-all duration-500 bg-zinc-800"
+      />
+
+      {images.length > 1 && (
+        <>
+          <button
+            onClick={prev}
+            className="absolute left-2 top-1/2 -translate-y-1/2 p-2 bg-black/50 hover:bg-violet-600/80 text-white rounded-full transition-all opacity-0 group-hover:opacity-100 backdrop-blur-sm"
+          >
+            <FiChevronLeft size={20} />
+          </button>
+          <button
+            onClick={next}
+            className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-black/50 hover:bg-violet-600/80 text-white rounded-full transition-all opacity-0 group-hover:opacity-100 backdrop-blur-sm"
+          >
+            <FiChevronRight size={20} />
+          </button>
+
+          <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5 p-1.5 bg-black/30 backdrop-blur-md rounded-full">
+            {images.map((_, idx) => (
+              <div
+                key={idx}
+                className={`w-1.5 h-1.5 rounded-full transition-all ${idx === currentIndex ? 'bg-violet-400 w-3' : 'bg-zinc-500'}`}
+              />
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  );
+};
 
 const ProjectModal = ({ isOpen, onClose, project }) => {
   // State untuk mengontrol animasi penutupan
@@ -42,41 +103,63 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
         onClick={(e) => e.stopPropagation()} // Mencegah modal tertutup saat diklik di dalam
         className={`bg-zinc-900 border border-violet-500/50 rounded-2xl shadow-2xl shadow-violet-500/20 w-full max-w-lg transform transition-transform duration-300 ${isClosing ? 'animate-out' : 'animate-in'}`}
       >
-        {/* --- GAMBAR PROYEK --- */}
-        <img 
-          src={project.image} 
-          alt={project.title} 
-          className="w-full h-56 object-cover rounded-t-2xl"
-        />
+        {/* --- GAMBAR PROYEK / SERTIFIKAT / ORGANISASI --- */}
+        <div className="relative group/img bg-zinc-800 rounded-t-2xl overflow-hidden min-h-[200px] flex items-center justify-center">
+          {project.images && project.images.length > 0 ? (
+            <div className="relative w-full h-full">
+              {/* Image Carousel State */}
+              <CarouselImages images={project.images} title={project.title} />
+            </div>
+          ) : (
+            <img
+              src={project.image || project.certificate}
+              alt={project.title}
+              className="w-full h-auto max-h-[70vh] object-contain"
+            />
+          )}
+        </div>
 
         <div className="p-6 flex flex-col gap-4">
-            <div className="flex justify-between items-start">
-                <h2 className="text-2xl font-bold text-white">{project.title}</h2>
-                <button
-                    onClick={handleClose}
-                    className="text-zinc-400 hover:text-white transition-colors p-2 rounded-full hover:bg-zinc-700 -mt-2 -mr-2"
-                >
-                    <FiX size={24} />
-                </button>
-            </div>
-
-            {/* --- DESKRIPSI LENGKAP --- */}
-            <p className="text-zinc-300 text-base leading-relaxed">
-                {project.fullDescription}
-            </p>
-
-            <a
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 inline-flex items-center justify-center gap-2 font-semibold bg-violet-600 p-3 px-5 rounded-full w-full cursor-pointer border border-transparent hover:bg-violet-700 transition-colors"
+          <div className="flex justify-between items-start">
+            <h2 className="text-xl sm:text-2xl font-bold text-white">{project.title}</h2>
+            <button
+              onClick={handleClose}
+              className="text-zinc-400 hover:text-white transition-colors p-2 rounded-full hover:bg-zinc-700 -mt-2 -mr-2"
             >
-                <FiGithub />
-                <span>Source Code</span>
+              <FiX size={24} />
+            </button>
+          </div>
+
+          {/* --- DESKRIPSI LENGKAP (Tampilkan hanya jika bukan sertifikat saja) --- */}
+          {project.fullDescription && (
+            <p className="text-zinc-300 text-sm sm:text-base leading-relaxed">
+              {project.fullDescription}
+            </p>
+          )}
+
+          {/* --- LINK GITHUB (Hanya untuk Proyek) --- */}
+          {project.url && (
+            <a
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center justify-center gap-2 font-semibold bg-violet-600 p-3 px-5 rounded-full w-full cursor-pointer border border-transparent hover:bg-violet-700 transition-colors"
+            >
+              <FiGithub />
+              <span>Source Code</span>
             </a>
+          )}
+
+          {/* --- INFO TAMBAHAN (Hanya untuk Prestasi) --- */}
+          {project.year && (
+            <div className="flex items-center justify-between text-zinc-400 text-sm mt-2">
+              <span>Achievement Milestone</span>
+              <span className="text-violet-500 font-bold">{project.year}</span>
+            </div>
+          )}
         </div>
       </div>
-       {/* CSS untuk animasi */}
+      {/* CSS untuk animasi */}
       <style>{`
         @keyframes scaleIn {
           from { transform: scale(0.95); opacity: 0; }

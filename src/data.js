@@ -176,7 +176,7 @@ export const listProyek = [
     image: Proyek1,
     title: "AIS Detection App",
     subtitle: "A mobile application powered by Artificial Intelligence...",
-    fullDescription:"A mobile application powered by Artificial Intelligence and Machine Learning, developed to assist in the early detection of Adolescent Idiopathic Scoliosis (AIS). By analyzing patient data and patterns, the app provides predictions that can help doctors and patients take preventive measures. This project demonstrates the role of AI in modern healthcare by improving accuracy, accessibility, and efficiency in medical diagnosis.",
+    fullDescription: "A mobile application powered by Artificial Intelligence and Machine Learning, developed to assist in the early detection of Adolescent Idiopathic Scoliosis (AIS). By analyzing patient data and patterns, the app provides predictions that can help doctors and patients take preventive measures. This project demonstrates the role of AI in modern healthcare by improving accuracy, accessibility, and efficiency in medical diagnosis.",
     borderColor: "#3B82F6",
     gradient: "linear-gradient(145deg, #3B82F6, #000)",
     url: "https://github.com/rissss21",
@@ -187,7 +187,7 @@ export const listProyek = [
     image: Proyek2,
     title: "IoT Air Quality Monitoring",
     subtitle: "A smart IoT system designed to measure and analyze air quality...",
-    fullDescription:"A smart IoT system designed to measure and analyze air quality using sensors connected to a mobile application. The app provides real-time updates on air quality levels, empowering users to make healthier lifestyle decisions based on environmental conditions. This project showcases the potential of IoT in addressing environmental and public health issues.",
+    fullDescription: "A smart IoT system designed to measure and analyze air quality using sensors connected to a mobile application. The app provides real-time updates on air quality levels, empowering users to make healthier lifestyle decisions based on environmental conditions. This project showcases the potential of IoT in addressing environmental and public health issues.",
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #10B981, #000)",
     url: "https://github.com/rissss21",
@@ -198,7 +198,7 @@ export const listProyek = [
     image: Proyek3,
     title: "IoT Heartbeat Monitoring System",
     subtitle: "An IoT-based healthcare project developed to measure and monitor...",
-    fullDescription:"An IoT-based healthcare project developed to measure and monitor heart rate in real-time. The system connects sensors to a local web server, enabling users and healthcare providers to track data directly from a web interface. This project highlights the integration of hardware and software to create efficient medical solutions that can be applied in local clinics or personal health monitoring.",
+    fullDescription: "An IoT-based healthcare project developed to measure and monitor heart rate in real-time. The system connects sensors to a local web server, enabling users and healthcare providers to track data directly from a web interface. This project highlights the integration of hardware and software to create efficient medical solutions that can be applied in local clinics or personal health monitoring.",
     borderColor: "#3B82F6",
     gradient: "linear-gradient(145deg, #3B82F6, #000)",
     url: "https://github.com/rissss21",
@@ -209,18 +209,18 @@ export const listProyek = [
     image: Proyek4,
     title: "Personal Web Portfolio",
     subtitle: "An interactive web portfolio showcasing my professional journey...",
-    fullDescription:"An interactive web portfolio showcasing my professional journey, skills, and projects. Designed with a clean yet modern aesthetic, the portfolio highlights my technical expertise in web development, software engineering, and IoT. The site also serves as a central hub for potential employers and collaborators to explore my works, reflecting both my creativity and technical precision.",
+    fullDescription: "An interactive web portfolio showcasing my professional journey, skills, and projects. Designed with a clean yet modern aesthetic, the portfolio highlights my technical expertise in web development, software engineering, and IoT. The site also serves as a central hub for potential employers and collaborators to explore my works, reflecting both my creativity and technical precision.",
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #10B981, #000)",
     url: "https://github.com/rissss21",
     dad: "400",
   },
-    {
+  {
     id: 5,
     image: Proyek5,
     title: "Color Blindness Detection App",
     subtitle: "A cross-platform application available on both mobile and desktop...",
-    fullDescription:"A cross-platform application available on both mobile and desktop, created to help identify different types of color blindness through color recognition tests. The app provides users with instant results, making it useful for educational, medical, and self-assessment purposes. Its intuitive design and accessibility aim to support individuals in understanding and managing color vision deficiencies.",
+    fullDescription: "A cross-platform application available on both mobile and desktop, created to help identify different types of color blindness through color recognition tests. The app provides users with instant results, making it useful for educational, medical, and self-assessment purposes. Its intuitive design and accessibility aim to support individuals in understanding and managing color vision deficiencies.",
     borderColor: "#3B82F6",
     gradient: "linear-gradient(145deg, #3B82F6, #000)",
     url: "https://github.com/rissss21",
@@ -231,10 +231,84 @@ export const listProyek = [
     image: Proyek6,
     title: "Coffee Shop Website",
     subtitle: "A fully functional website designed for a coffee shop, enabling...",
-    fullDescription:"A fully functional website designed for a coffee shop, enabling customers to explore the menu, learn about the shop’s story, and place orders online. The project focused on creating an attractive and modern interface, integrating responsive design for mobile and desktop, and ensuring smooth navigation for users. This website not only improved customer experience but also supported the coffee shop’s digital presence and business growth.",
+    fullDescription: "A fully functional website designed for a coffee shop, enabling customers to explore the menu, learn about the shop’s story, and place orders online. The project focused on creating an attractive and modern interface, integrating responsive design for mobile and desktop, and ensuring smooth navigation for users. This website not only improved customer experience but also supported the coffee shop’s digital presence and business growth.",
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #10B981, #000)",
     url: "https://github.com/rissss21",
     dad: "600",
   },
+];
+export const listPrestasi = [
+  {
+    id: 1,
+    title: "1st Place - Web Development Competition",
+    year: "2023",
+    description: "Won first place in a prestigious national web development competition held by a leading university.",
+    icon: "ri-trophy-fill",
+    certificate: "./assets/str.jpg", // Gantilah dengan path sertifikat Anda
+    delay: "100"
+  },
+  {
+    id: 2,
+    title: "Finalist - AI Innovation Challenge",
+    year: "2024",
+    description: "Recognized as a finalist for developing an AI-based health monitoring application.",
+    icon: "ri-medal-fill",
+    certificate: "./assets/solli.png", // Gantilah dengan path sertifikat Anda
+    delay: "200"
+  },
+  {
+    id: 3,
+    title: "Best UI/UX Design - Hackathon",
+    year: "2022",
+    description: "Awarded for creating the most intuitive and aesthetic user interface for a fintech startup idea.",
+    icon: "ri-award-fill",
+    certificate: "./assets/solli.png", // Gantilah dengan path sertifikat Anda
+    delay: "300"
+  },
+  {
+    id: 4,
+    title: "Certified Full-Stack Developer",
+    year: "2023",
+    description: "Successfully completed an intensive 6-month bootcamp covering modern web technologies.",
+    icon: "ri-verified-badge-fill",
+    certificate: "./assets/solli.png", // Gantilah dengan path sertifikat Anda
+    delay: "400"
+  }
+];
+
+export const listOrganisasi = [
+  {
+    id: 1,
+    title: "Ketua Panitia - Tech Symposium 2024",
+    organization: "Himpunan Mahasiswa Informatika",
+    year: "2024",
+    description: "Bertanggung jawab dalam mengoordinasikan seluruh divisi untuk mensukseskan acara simposium teknologi skala nasional.",
+    fullDescription: "Sebagai Ketua Panitia Tech Symposium 2024, saya memimpin tim yang terdiri dari 50+ panitia untuk menyelenggarakan acara teknologi tingkat nasional. Tanggung jawab saya meliputi perencanaan strategis, manajemen anggaran, koordinasi antar divisi (acara, logistik, humas), hingga menjamin kelancaran pelaksanaan di hari-H. Acara ini berhasil menarik lebih dari 500 peserta dari berbagai universitas.",
+    icon: "ri-group-fill",
+    images: ["./assets/proyek/proyek1.jpg", "./assets/proyek/proyek2.jpg", "./assets/proyek/proyek3.jpg"],
+    delay: "100"
+  },
+  {
+    id: 2,
+    title: "Koordinator Devisi Perlombaan - Hackathon Fest",
+    organization: "Unit Kegiatan Mahasiswa Pemrograman",
+    year: "2023",
+    description: "Mengelola teknis perlombaan, penjurian, dan memastikan seluruh rangkaian kompetisi berjalan dengan lancar.",
+    fullDescription: "Bertindak sebagai Koordinator Divisi Perlombaan dalam Hackathon Fest 2023. Saya merancang aturan kompetisi, kriteria penilaian, dan sistem seleksi peserta. Saya juga berkoordinasi dengan para juri dari industri teknologi untuk memastikan penilaian yang objektif dan berkualitas. Kompetisi ini fokus pada pengembangan solusi inovatif untuk tantangan keberlanjutan.",
+    icon: "ri-command-fill",
+    images: ["./assets/proyek/proyek4.jpg", "./assets/proyek/proyek5.jpg", "./assets/proyek/proyek6.jpg"],
+    delay: "200"
+  },
+  {
+    id: 3,
+    title: "Anggota Bidang Hubungan Masyarakat",
+    organization: "BEM Fakultas Teknik",
+    year: "2022 - 2023",
+    description: "Membangun relasi dengan pihak eksternal dan mengelola komunikasi publik organisasi melalui media sosial.",
+    fullDescription: "Menjadi bagian dari tim Humas BEM FT, saya bertanggung jawab dalam mengelola citra organisasi di media sosial dan membangun kerjasama dengan organisasi lain maupun sponsor. Saya aktif dalam pembuatan konten publikasi, manajemen krisis komunikasi, dan menjadi penghubung utama antara mahasiswa dengan pihak fakultas.",
+    icon: "ri-global-fill",
+    images: ["./assets/proyek/proyek1.jpg", "./assets/proyek/proyek3.jpg", "./assets/proyek/proyek5.jpg"],
+    delay: "300"
+  }
 ];

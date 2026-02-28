@@ -82,7 +82,6 @@ const BlurText = ({
     <p
       ref={ref}
       className={className}
-      style={{ display: 'flex', flexWrap: 'wrap' }}
     >
       {elements.map((segment, index) => {
         const animateKeyframes = buildKeyframes(fromSnapshot, toSnapshots);
@@ -92,22 +91,23 @@ const BlurText = ({
           times,
           delay: (index * delay) / 1000,
         };
-        (spanTransition).ease = easing;
+        spanTransition.ease = easing;
 
         return (
-          <motion.span
-            className="inline-block will-change-[transform,filter,opacity]"
-            key={index}
-            initial={fromSnapshot}
-            animate={inView ? animateKeyframes : fromSnapshot}
-            transition={spanTransition}
-            onAnimationComplete={
-              index === elements.length - 1 ? onAnimationComplete : undefined
-            }
-          >
-            {segment === ' ' ? '\u00A0' : segment}
-            {animateBy === 'words' && index < elements.length - 1 && '\u00A0'}
-          </motion.span>
+          <span key={index} style={{ whiteSpace: 'pre-wrap' }}>
+            <motion.span
+              className="inline-block will-change-[transform,filter,opacity]"
+              initial={fromSnapshot}
+              animate={inView ? animateKeyframes : fromSnapshot}
+              transition={spanTransition}
+              onAnimationComplete={
+                index === elements.length - 1 ? onAnimationComplete : undefined
+              }
+            >
+              {segment}
+            </motion.span>
+            {animateBy === 'words' && index < elements.length - 1 && ' '}
+          </span>
         );
       })}
     </p>

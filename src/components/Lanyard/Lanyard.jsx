@@ -7,7 +7,7 @@ import { BallCollider, CuboidCollider, Physics, RigidBody, useRopeJoint, useSphe
 import { MeshLineGeometry, MeshLineMaterial } from 'meshline';
 
 // replace with your own imports, see the usage snippet for details
-const cardGLB = "/portofolio/assets/card.glb";
+const cardPhoto = "/portofolio/assets/solli.png";
 const lanyard = "/portofolio/assets/lanyard.png";
 
 import * as THREE from 'three';
@@ -41,8 +41,10 @@ function Band({ maxSpeed = 50, minSpeed = 0 }) {
   const band = useRef(), fixed = useRef(), j1 = useRef(), j2 = useRef(), j3 = useRef(), card = useRef();
   const vec = new THREE.Vector3(), ang = new THREE.Vector3(), rot = new THREE.Vector3(), dir = new THREE.Vector3();
   const segmentProps = { type: 'dynamic', canSleep: true, colliders: false, angularDamping: 4, linearDamping: 4 };
-  const { nodes, materials } = useGLTF(cardGLB);
+
   const texture = useTexture(lanyard);
+  const cardTexture = useTexture(cardPhoto);
+
   const [curve] = useState(() => new THREE.CatmullRomCurve3([new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3()]));
   const [dragged, drag] = useState(false);
   const [hovered, hover] = useState(false);
@@ -51,7 +53,7 @@ function Band({ maxSpeed = 50, minSpeed = 0 }) {
   );
 
   useRopeJoint(fixed, j1, [[0, 0, 0], [0, 0, 0], 1]);
-  useRopeJoint(j1, j2, [[0, 0, 0], [0, 0, 0], 1]);
+  useSphericalJoint(j3, card, [[0, 0, 0], [0, 0.7, 0]]); 
   useRopeJoint(j2, j3, [[0, 0, 0], [0, 0, 0], 1]);
   useSphericalJoint(j3, card, [[0, 0, 0], [0, 1.50, 0]]);
 
@@ -117,16 +119,15 @@ function Band({ maxSpeed = 50, minSpeed = 0 }) {
           <CuboidCollider args={[0.8, 1.125, 0.01]} />
           <group
             scale={2.25}
-            position={[0, -1.2, -0.05]}
+            position={[0, -0.5, -0.05]}
             onPointerOver={() => hover(true)}
             onPointerOut={() => hover(false)}
             onPointerUp={(e) => (e.target.releasePointerCapture(e.pointerId), drag(false))}
             onPointerDown={(e) => (e.target.setPointerCapture(e.pointerId), drag(new THREE.Vector3().copy(e.point).sub(vec.copy(card.current.translation()))))}>
-            <mesh geometry={nodes.card.geometry}>
-              <meshPhysicalMaterial map={materials.base.map} map-anisotropy={16} clearcoat={1} clearcoatRoughness={0.15} roughness={0.9} metalness={0.8} />
+            <mesh>
+              <planeGeometry args={[0.8, 1.125]} />
+              <meshBasicMaterial map={cardTexture} side={THREE.DoubleSide} transparent={true} />
             </mesh>
-            <mesh geometry={nodes.clip.geometry} material={materials.metal} material-roughness={0.3} />
-            <mesh geometry={nodes.clamp.geometry} material={materials.metal} />
           </group>
         </RigidBody>
       </group>
