@@ -29,17 +29,13 @@ function App() {
   // -------------------------
 
   useEffect(() => {
-    // Sembunyikan reload logic jika tidak diperlukan, 404.html sudah menangani routing SPA
-    // Namun kita biarkan jika User membutuhkannya, tapi kita pastikan path benar
     const isReload =
       performance.getEntriesByType("navigation")[0]?.type === "reload";
 
     if (isReload) {
-      const targetPath = "/portofolio-/";
-      if (!window.location.pathname.startsWith(targetPath)) {
-        const baseUrl = window.location.origin + targetPath;
-        window.location.replace(baseUrl);
-      }
+      // Ambil path tanpa hash
+      const baseUrl = window.location.origin + "/portofolio-/";
+      window.location.replace(baseUrl);
     }
   }, []);
 
