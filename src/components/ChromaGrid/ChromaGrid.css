@@ -107,19 +107,30 @@
 .chroma-info {
   position: relative;
   z-index: 1;
-  padding: 1.5rem 1rem;
+  padding: 1.25rem 1rem;
   color: #fff;
   font-family: system-ui, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
-  gap: 0.5rem;
+  gap: 0.35rem;
+  width: 100%;
+}
+
+.chroma-info h3,
+.chroma-info p,
+.chroma-info span {
+  text-align: center;
+  margin: 0;
+  width: 100%;
 }
 
 .chroma-info .role,
 .chroma-info .handle {
   color: #aaa;
+  font-size: 0.85rem;
 }
 
 .chroma-overlay {

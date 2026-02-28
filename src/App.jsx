@@ -97,22 +97,22 @@ function App() {
               direction="top"
               className="mb-8 max-w-lg"
             />
-            <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 py-2">
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 py-2 mt-4">
               <a
                 href="./assets/CV.pdf"
                 download="Mohammad_Solli_CV.pdf"
-                className="font-semibold bg-violet-600 p-3 md:p-4 px-6 md:px-8 rounded-full hover:bg-violet-700 transition-all transform hover:scale-105 text-sm md:text-base shadow-lg shadow-violet-500/20"
+                className="font-semibold bg-violet-600 p-3 md:p-4 px-6 md:px-8 rounded-full hover:bg-violet-700 transition-all transform hover:scale-110 text-xs md:text-base shadow-lg shadow-violet-500/20"
               >
                 Download CV
               </a>
 
-              <a href="#project" className="font-semibold bg-zinc-900 p-3 md:p-4 px-6 md:px-8 rounded-full border border-zinc-700 hover:bg-zinc-800 transition-all transform hover:scale-105 text-sm md:text-base">
+              <a href="#project" className="font-semibold bg-zinc-900 p-3 md:p-4 px-6 md:px-8 rounded-full border border-zinc-700 hover:bg-zinc-800 transition-all transform hover:scale-110 text-xs md:text-base">
                 Explore My Projects
               </a>
             </div>
 
           </div>
-          <div className="md:ml-auto animate__animated animate__fadeInUp">
+          <div className="flex justify-center md:justify-end animate__animated animate__fadeInUp">
             <ProfileCard
               name=""
               title=""
@@ -124,6 +124,7 @@ function App() {
               enableTilt={true}
               enableMobileTilt={false}
               onContactClick={() => console.log('Contact clicked')}
+              className="mx-auto md:mx-0"
             />
           </div>
         </div>
@@ -151,7 +152,7 @@ function App() {
                   delay={150}
                   animateBy="words"
                   direction="top"
-                  className="text-sm md:text-lg leading-relaxed mb-8 md:mb-10 text-gray-300 text-justify"
+                  className="text-sm md:text-lg leading-relaxed mb-8 md:mb-10 text-gray-300 text-center md:text-justify"
                 />
 
                 <div className="grid grid-cols-2 lg:flex lg:flex-row items-center justify-between gap-y-6 lg:gap-0 mb-6 w-full text-center lg:text-left">
@@ -271,14 +272,14 @@ function App() {
                 data-aos-delay={prestasi.delay}
                 data-aos-once="true"
               >
-                <div className="flex flex-col items-center text-center gap-4">
-                  <div className="p-3 bg-zinc-900 rounded-xl group-hover:scale-110 transition-transform duration-300 w-fit">
-                    <i className={`${prestasi.icon} ri-2x text-violet-500`}></i>
+                <div className="flex flex-col items-center justify-center text-center gap-4 w-full">
+                  <div className="p-3 bg-zinc-900 rounded-xl group-hover:scale-110 transition-transform duration-300 w-14 h-14 flex items-center justify-center border border-zinc-700">
+                    <i className={`${prestasi.icon} ri-xl text-violet-500`}></i>
                   </div>
-                  <div>
-                    <span className="text-violet-500 font-semibold text-sm block mb-1">{prestasi.year}</span>
-                    <h3 className="text-xl font-bold text-white mb-2">{prestasi.title}</h3>
-                    <p className="text-zinc-400 text-sm leading-relaxed">{prestasi.description}</p>
+                  <div className="flex flex-col items-center w-full">
+                    <span className="text-violet-500 font-semibold text-xs md:text-sm block mb-1 uppercase tracking-wider">{prestasi.year}</span>
+                    <h3 className="text-lg md:text-xl font-bold text-white mb-2 leading-tight px-2">{prestasi.title}</h3>
+                    <p className="text-zinc-400 text-xs md:text-sm leading-relaxed max-w-[280px] sm:max-w-none">{prestasi.description}</p>
                   </div>
                 </div>
               </div>
@@ -318,17 +319,15 @@ function App() {
                 data-aos-delay={org.delay}
                 data-aos-once="true"
               >
-                <div className="flex flex-col items-center text-center gap-4">
-                  <div className="w-12 h-12 flex items-center justify-center bg-zinc-900 rounded-xl group-hover:scale-110 transition-transform duration-300 border border-zinc-700 group-hover:border-cyan-500/50">
+                <div className="flex flex-col items-center justify-center text-center gap-4 w-full">
+                  <div className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center bg-zinc-900 rounded-xl group-hover:scale-110 transition-transform duration-300 border border-zinc-700 group-hover:border-cyan-500/50">
                     <i className={`${org.icon} ri-xl text-cyan-500`}></i>
                   </div>
-                  <div className="w-full">
-                    <div className="flex justify-center items-start mb-2">
-                      <span className="text-cyan-500 font-semibold text-xs tracking-wider uppercase">{org.year}</span>
-                    </div>
-                    <h3 className="text-lg font-bold text-white mb-1 group-hover:text-cyan-400 transition-colors uppercase tracking-tight">{org.title}</h3>
-                    <p className="text-sm text-zinc-300 font-medium mb-3 italic">{org.organization}</p>
-                    <p className="text-zinc-500 text-xs leading-relaxed">{org.description}</p>
+                  <div className="w-full flex flex-col items-center">
+                    <span className="text-cyan-500 font-semibold text-[10px] md:text-xs tracking-widest uppercase mb-1">{org.year}</span>
+                    <h3 className="text-base md:text-lg font-bold text-white mb-1 group-hover:text-cyan-400 transition-colors uppercase tracking-tight px-2 leading-tight">{org.title}</h3>
+                    <p className="text-xs md:text-sm text-zinc-300 font-medium mb-3 italic opacity-80">{org.organization}</p>
+                    <p className="text-zinc-500 text-xs leading-relaxed max-w-[260px] sm:max-w-none px-2">{org.description}</p>
                   </div>
                 </div>
               </div>
