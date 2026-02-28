@@ -189,10 +189,10 @@ function App() {
           </div>
 
         </div>
-        <div className="tools mt-20 md:mt-32 px-4 md:px-0 flex flex-col items-center md:items-start">
-          <h1 className="text-2xl sm:text-4xl font-bold mb-4 text-center md:text-left" data-aos="fade-up" data-aos-duration="600" data-aos-once="true" >Tools & Technologies</h1>
-          <p className="w-full md:w-2/5 text-sm md:text-base opacity-50 text-center md:text-left mx-auto md:mx-0" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300" data-aos-once="true">My Profesional Skills</p>
-          <div className="tools-box mt-14 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
+        <div className="tools mt-20 md:mt-32 px-4 md:px-0 flex flex-col items-center">
+          <h1 className="text-2xl sm:text-4xl font-bold mb-4 text-center" data-aos="fade-up" data-aos-duration="600" data-aos-once="true" >Tools & Technologies</h1>
+          <p className="w-full md:w-2/5 text-sm md:text-base opacity-50 text-center mx-auto" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300" data-aos-once="true">My Profesional Skills</p>
+          <div className="tools-box mt-14 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 w-full max-w-5xl mx-auto">
 
             {listTools.map((tool) => (
               <div
