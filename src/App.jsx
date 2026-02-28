@@ -95,7 +95,7 @@ function App() {
               delay={150}
               animateBy="words"
               direction="top"
-              className="mb-8 max-w-lg"
+              className="mb-8 max-w-lg mx-auto md:mx-0"
             />
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 py-2 mt-4">
               <a
@@ -189,9 +189,9 @@ function App() {
           </div>
 
         </div>
-        <div className="tools mt-20 md:mt-32 px-4 md:px-0">
+        <div className="tools mt-20 md:mt-32 px-4 md:px-0 flex flex-col items-center md:items-start">
           <h1 className="text-2xl sm:text-4xl font-bold mb-4 text-center md:text-left" data-aos="fade-up" data-aos-duration="600" data-aos-once="true" >Tools & Technologies</h1>
-          <p className="w-full md:w-2/5 text-sm md:text-base opacity-50 text-center md:text-left" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300" data-aos-once="true">My Profesional Skills</p>
+          <p className="w-full md:w-2/5 text-sm md:text-base opacity-50 text-center md:text-left mx-auto md:mx-0" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300" data-aos-once="true">My Profesional Skills</p>
           <div className="tools-box mt-14 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
 
             {listTools.map((tool) => (
@@ -221,9 +221,9 @@ function App() {
         </div>
         {/* tentang */}
 
-        <div id="project" className="mt-16 md:mt-24 py-10" data-aos="fade-up" data-aos-duration="600" data-aos-once="true">
+        <div id="project" className="mt-16 md:mt-24 py-10 flex flex-col items-center" data-aos="fade-up" data-aos-duration="600" data-aos-once="true">
           <h1 className="text-center text-3xl md:text-4xl font-bold mb-4">Project</h1>
-          <p className="text-sm md:text-base/loose text-center opacity-50 px-4 md:px-40">Showcasing a selection of projects that reflect my skills, creativity, and passion for building meaningful digital experiences.</p>
+          <p className="text-sm md:text-base/loose text-center opacity-50 px-4 md:px-40 max-w-4xl mx-auto">Showcasing a selection of projects that reflect my skills, creativity, and passion for building meaningful digital experiences.</p>
         </div>
         <div className="proyek-box mt-14" >
 
