@@ -201,7 +201,7 @@ export const listPrestasi = [
     year: "2025",
     description: "saya menjuarai lomba infografis di event ekspora yang di laksanakan HMPS pariwisata Syariah UIN syyid ali rahmatullah tulungagung.",
     icon: "ri-trophy-fill",
-    certificate: "./assets/public/1p.jpeg", // Gantilah dengan path sertifikat Anda
+    certificate: "./prestasi/1p.jpeg", // Gantilah dengan path sertifikat Anda
     delay: "100"
   },
   {
@@ -210,7 +210,7 @@ export const listPrestasi = [
     year: "2024",
     description: "saya menjuarai lomba video competition di event TIF EXHIBITION yang di laksanakan oleh KEMATIF Jurusan Teknologi Informasi Politeknik Negeri Jember.",
     icon: "ri-medal-fill",
-    certificate: "./assets/public/2p.jpeg", // Gantilah dengan path sertifikat Anda
+    certificate: "./prestasi/2p.jpeg", // Gantilah dengan path sertifikat Anda
     delay: "200"
   },
   {
@@ -219,7 +219,7 @@ export const listPrestasi = [
     year: "2023",
     description: "saya menjuarai lomba aplikasi di event TIF EXHIBITION yang di laksanakan oleh KEMATIF Jurusan Teknologi Informasi Politeknik Negeri Jember.",
     icon: "ri-award-fill",
-    certificate: "./assets/public/3p.jpeg", // Gantilah dengan path sertifikat Anda
+    certificate: "./prestasi/3p.jpeg", // Gantilah dengan path sertifikat Anda
     delay: "300"
   },
   {
@@ -228,7 +228,7 @@ export const listPrestasi = [
     year: "2023",
     description: "saya menjuarai lomba poster kreatif yang di laksanakan oleh Jurusan Manajemen Agribisnis Politeknik Negeri Jember.",
     icon: "ri-verified-badge-fill",
-    certificate: "./assets/public/4p.jpeg", // Gantilah dengan path sertifikat Anda
+    certificate: "./prestasi/4p.jpeg", // Gantilah dengan path sertifikat Anda
     delay: "400"
   },
   {
@@ -237,7 +237,7 @@ export const listPrestasi = [
     year: "2025",
     description: "saya menjuarai lomba Creative Infographic di event BEC Jurusan Bisnis Politeknik Negeri Jember .",
     icon: "ri-verified-badge-fill",
-    certificate: "./assets/public/5p.jpeg", // Gantilah dengan path sertifikat Anda
+    certificate: "./prestasi/5p.jpeg", // Gantilah dengan path sertifikat Anda
     delay: "400"
   },
   {
@@ -246,7 +246,7 @@ export const listPrestasi = [
     year: "2025",
     description: "saya menjuarai lomba video competition di event TIF EXHIBITION yang di laksanakan oleh KEMATIF Jurusan Teknologi Informasi Politeknik Negeri Jember.",
     icon: "ri-award-fill",
-    certificate: "./assets/public/6p.jpeg", // Gantilah dengan path sertifikat Anda
+    certificate: "./prestasi/6p.jpeg", // Gantilah dengan path sertifikat Anda
     delay: "300"
   },
 ];
