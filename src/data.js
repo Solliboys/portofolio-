@@ -197,7 +197,7 @@ export const listProyek = [
 export const listPrestasi = [
   {
     id: 1,
-    title: "3rd Place - Juara Lomba Infografis 2025",
+    title: "Juara 3 - Juara Lomba Infografis 2025",
     year: "2025",
     description: "saya menjuarai lomba infografis di event ekspora yang di laksanakan HMPS pariwisata Syariah UIN syyid ali rahmatullah tulungagung.",
     icon: "ri-trophy-fill",
@@ -206,7 +206,7 @@ export const listPrestasi = [
   },
   {
     id: 2,
-    title: "3rd - Juara video competition TIF EXHIBITION",
+    title: "Juara 3 - Juara video competition TIF EXHIBITION",
     year: "2024",
     description: "saya menjuarai lomba video competition di event TIF EXHIBITION yang di laksanakan oleh KEMATIF Jurusan Teknologi Informasi Politeknik Negeri Jember.",
     icon: "ri-medal-fill",
