@@ -35,20 +35,7 @@ export const listTools = [
     ket: "Code Editor",
     dad: "100",
   },
-  {
-    id: 2,
-    gambar: Tools2,
-    nama: "React JS",
-    ket: "Framework",
-    dad: "200",
-  },
-  {
-    id: 3,
-    gambar: Tools3,
-    nama: "Next JS",
-    ket: "Framework",
-    dad: "300",
-  },
+
   {
     id: 4,
     gambar: Tools4,
@@ -70,13 +57,7 @@ export const listTools = [
     ket: "Language",
     dad: "600",
   },
-  {
-    id: 7,
-    gambar: Tools7,
-    nama: "Node JS",
-    ket: "Javascript Runtime",
-    dad: "700",
-  },
+  
   {
     id: 8,
     gambar: Tools8,
@@ -84,13 +65,7 @@ export const listTools = [
     ket: "Repository",
     dad: "800",
   },
-  {
-    id: 9,
-    gambar: Tools9,
-    nama: "Adobe Illustrator",
-    ket: "Design App",
-    dad: "900",
-  },
+  
   {
     id: 10,
     gambar: Tools10,
@@ -112,13 +87,7 @@ export const listTools = [
     ket: "Language",
     dad: "1200",
   },
-  {
-    id: 13,
-    gambar: Tools13,
-    nama: "Firebase",
-    ket: "Framework",
-    dad: "1300",
-  },
+
   {
     id: 14,
     gambar: Tools14,
@@ -133,26 +102,13 @@ export const listTools = [
     ket: "Language",
     dad: "1500",
   },
-  {
-    id: 16,
-    gambar: Tools16,
-    nama: "TypeScript",
-    ket: "Language",
-    dad: "1600",
-  },
+
   {
     id: 17,
     gambar: Tools17,
     nama: "PHP",
     ket: "Language",
     dad: "1700",
-  },
-  {
-    id: 18,
-    gambar: Tools18,
-    nama: "Vite",
-    ket: "Framework",
-    dad: "1800",
   },
   {
     id: 19,
@@ -241,40 +197,58 @@ export const listProyek = [
 export const listPrestasi = [
   {
     id: 1,
-    title: "1st Place - Web Development Competition",
-    year: "2023",
-    description: "Won first place in a prestigious national web development competition held by a leading university.",
+    title: "3rd Place - Juara Lomba Infografis 2025",
+    year: "2025",
+    description: "saya menjuarai lomba infografis di event ekspora yang di laksanakan HMPS pariwisata Syariah UIN syyid ali rahmatullah tulungagung.",
     icon: "ri-trophy-fill",
-    certificate: "./assets/str.jpg", // Gantilah dengan path sertifikat Anda
+    certificate: "./assets/public/1p.jpeg", // Gantilah dengan path sertifikat Anda
     delay: "100"
   },
   {
     id: 2,
-    title: "Finalist - AI Innovation Challenge",
+    title: "3rd - Juara video competition TIF EXHIBITION",
     year: "2024",
-    description: "Recognized as a finalist for developing an AI-based health monitoring application.",
+    description: "saya menjuarai lomba video competition di event TIF EXHIBITION yang di laksanakan oleh KEMATIF Jurusan Teknologi Informasi Politeknik Negeri Jember.",
     icon: "ri-medal-fill",
-    certificate: "./assets/solli.png", // Gantilah dengan path sertifikat Anda
+    certificate: "./assets/public/2p.jpeg", // Gantilah dengan path sertifikat Anda
     delay: "200"
   },
   {
     id: 3,
-    title: "Best UI/UX Design - Hackathon",
-    year: "2022",
-    description: "Awarded for creating the most intuitive and aesthetic user interface for a fintech startup idea.",
+    title: "Juara harapan 2 - Aplikasi TIF EXHIBITION",
+    year: "2023",
+    description: "saya menjuarai lomba aplikasi di event TIF EXHIBITION yang di laksanakan oleh KEMATIF Jurusan Teknologi Informasi Politeknik Negeri Jember.",
     icon: "ri-award-fill",
-    certificate: "./assets/solli.png", // Gantilah dengan path sertifikat Anda
+    certificate: "./assets/public/3p.jpeg", // Gantilah dengan path sertifikat Anda
     delay: "300"
   },
   {
     id: 4,
-    title: "Certified Full-Stack Developer",
+    title: "Juara 4 - Lomba Poster kreatif ",
     year: "2023",
-    description: "Successfully completed an intensive 6-month bootcamp covering modern web technologies.",
+    description: "saya menjuarai lomba poster kreatif yang di laksanakan oleh Jurusan Manajemen Agribisnis Politeknik Negeri Jember.",
     icon: "ri-verified-badge-fill",
-    certificate: "./assets/solli.png", // Gantilah dengan path sertifikat Anda
+    certificate: "./assets/public/4p.jpeg", // Gantilah dengan path sertifikat Anda
     delay: "400"
-  }
+  },
+  {
+   id: 5,
+    title: "Juara 3 - Creative Infographic",
+    year: "2025",
+    description: "saya menjuarai lomba Creative Infographic di event BEC Jurusan Bisnis Politeknik Negeri Jember .",
+    icon: "ri-verified-badge-fill",
+    certificate: "./assets/public/5p.jpeg", // Gantilah dengan path sertifikat Anda
+    delay: "400"
+  },
+  {
+    id: 6,
+    title: "Juara 3 - Video Competition TIF EXHIBITION",
+    year: "2025",
+    description: "saya menjuarai lomba video competition di event TIF EXHIBITION yang di laksanakan oleh KEMATIF Jurusan Teknologi Informasi Politeknik Negeri Jember.",
+    icon: "ri-award-fill",
+    certificate: "./assets/public/6p.jpeg", // Gantilah dengan path sertifikat Anda
+    delay: "300"
+  },
 ];
 
 export const listOrganisasi = [

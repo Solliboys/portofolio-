@@ -148,8 +148,8 @@ function App() {
                 </h2>
 
                 <BlurText
-                  text="Saya Mohammad Solli, seorang full-stack developer yang bersemangat dalam membangun aplikasi modern dengan performa tinggi serta pengalaman pengguna yang intuitif. Saya senang bekerja dengan teknologi terbaru seperti Artificial Intelligence (AI), Machine Learning, dan pengembangan berbasis cloud, dengan memadukan kreativitas dan ketelitian untuk menghasilkan solusi yang berdampak. Dengan pengalaman lebih dari tiga tahun dan lebih dari 20 proyek yang telah diselesaikan, saya berkomitmen membantu pengguna dan bisnis berkembang di era digital melalui produk digital yang fungsional, estetis, dan scalable."
-                  delay={150}
+                  text="Saya Mohammad Solli, seorang Front-End Developer yang berfokus pada UI/UX dan bersemangat dalam menciptakan antarmuka aplikasi yang modern, responsif, dan mudah digunakan. Saya memiliki ketertarikan besar dalam merancang pengalaman pengguna yang intuitif dengan menggabungkan desain yang estetis dan performa aplikasi yang optimal. Saya terbiasa bekerja dengan teknologi web modern serta memahami pentingnya keseimbangan antara desain visual, usability, dan performa aplikasi. Saat ini saya merupakan mahasiswa Teknik Informatika, dengan pengalaman mengerjakan lebih dari 7 proyek pengembangan aplikasi dan website yang berfokus pada pembuatan antarmuka yang menarik dan berorientasi pada pengalaman pengguna."
+                  delay={120}
                   animateBy="words"
                   direction="top"
                   className="text-sm md:text-lg leading-relaxed mb-8 md:mb-10 text-gray-300 text-center md:text-justify"
